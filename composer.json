@@ -1,0 +1,29 @@
+{
+  "name": "golden-hippo/wordpress-site",
+  "description": "Golden Hippo WordPress project",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "johnpbloch/wordpress": "^6.0",
+    "wpackagist-plugin/wordpress-seo": "^20.0",
+    "wpackagist-plugin/wp-super-cache": "^1.7",
+    "wpackagist-plugin/wordfence": "^7.9"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+    "wordpress-install-dir": "wp",
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  }
+}
